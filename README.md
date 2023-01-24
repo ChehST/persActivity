@@ -4,4 +4,4 @@
 В идеале это демон, фоновый процесс который распознаёт запросы в сети и формирует
 карту активнсти с элементами отображающую количество запросов к конкретным ресурсам.
 
-![Data csv file](https://github.com/ChehST/persActivity/tree/master/docs/images/xmpl.png)
+![Example](https://github.com/ChehST/persActivity/blob/master/docs/images/xmpl.png)
