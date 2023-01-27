@@ -1,4 +1,0 @@
-
-
-class Packet(object):
-    pass
