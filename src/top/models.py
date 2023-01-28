@@ -5,10 +5,12 @@ import subprocess
 
 
 class Host:
+""" Класс описывающий объект Host """
 
-    def __init__(self, hostname, ip_address):
+    def __init__(self, hostname, ip_address, mac_address):
         self.hostname = hostname
         self.ip_address = ip_address
+        self.mac_address = mac_address
 
     def ping(self):
         """ Проверяем доступность хоста """
@@ -17,3 +19,17 @@ class Host:
             return "Host is up"
         except subprocess.CalledProcessError as e:
             return "Host is down"
+
+class Network(Host):
+""" Класс описывающий объект Network """
+
+    def __init__(self, net_mask):
+        self.net_mask = net_mask
+        self.hosts = []
+
+    def add_host(self, host):
+        self.hosts.append(host)
+
+    def ping_hosts(self):
+        for host in self.hosts:
+            print(host.ping())
